@@ -1,120 +1,120 @@
-# OpenRouter Model Pricing Comparison Tool 🚀
+# OpenRouter 模型价格比较工具 🚀
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 [![GitHub Actions](https://img.shields.io/badge/Updated-Every%2012%20Hours-blue.svg)](https://github.com/jvrck/openrouterlist/actions)
 [![Website](https://img.shields.io/badge/Website-Live-brightgreen.svg)](https://openrouterlist.jvrck.com/)
 
-A comprehensive, real-time pricing comparison tool for 400+ AI language models available through the [OpenRouter API](https://openrouter.ai/). Compare costs across GPT-4, Claude, Llama, Mistral, and hundreds of other models to find the most cost-effective solution for your AI needs.
+一个全面的、实时的价格比较工具，用于比较通过 [OpenRouter API](https://openrouter.ai/) 提供的 400+ 种 AI 语言模型。比较 GPT-4、Claude、Llama、Mistral 和数百种其他模型的成本，找到最适合您 AI 需求的性价比解决方案。
 
-**🔗 Live Tool: [https://openrouterlist.jvrck.com/](https://openrouterlist.jvrck.com/)**
+**🔗 在线工具: [https://openrouterlist.jvrck.com/](https://openrouterlist.jvrck.com/)**
 
-## 📊 Key Features
+## 📊 主要功能
 
-- **Real-Time Pricing Data**: Automatically updated every 12 hours from OpenRouter's API
-- **400+ AI Models**: Comprehensive coverage of all available models including GPT-4, Claude 3, Llama 3, and more
-- **Advanced Filtering**: Filter by capabilities (tool calling, structured outputs, reasoning, web search)
-- **Cost Calculator**: Pricing shown per million tokens for both prompts and completions
-- **Export Options**: Download data as CSV, Excel, PDF, or print for offline analysis
-- **Dark Mode**: Eye-friendly dark theme for extended use
-- **Mobile Responsive**: Optimized for all devices with card and table views
+- **实时价格数据**: 每 12 小时自动从 OpenRouter API 更新
+- **400+ AI 模型**: 全面覆盖所有可用模型，包括 GPT-4、Claude 3、Llama 3 等
+- **高级筛选**: 按功能筛选（工具调用、结构化输出、推理、网络搜索）
+- **成本计算器**: 显示每百万令牌的提示和完成价格
+- **导出选项**: 下载 CSV、Excel、PDF 数据或打印以供离线分析
+- **深色模式**: 护眼深色主题，适合长时间使用
+- **移动端响应式**: 优化所有设备，支持卡片和表格视图
 
-## 🔍 Use Cases
+## 🔍 使用场景
 
-- **Developers**: Find the most cost-effective model for your application
-- **Businesses**: Compare enterprise AI solution costs
-- **Researchers**: Analyze pricing trends across different model families
-- **Budget Planning**: Estimate token costs for your AI projects
+- **开发者**: 为您的应用程序找到最具成本效益的模型
+- **企业**: 比较企业 AI 解决方案成本
+- **研究人员**: 分析不同模型系列的价格趋势
+- **预算规划**: 估算 AI 项目的令牌成本
 
-## 📁 Project Structure
+## 📁 项目结构
 
-- `index.html` - Interactive web interface with advanced filtering and search
-- `scripts/get_zipped.sh` - Data fetching script that pulls latest pricing from OpenRouter API
-- `.github/workflows/daily_run.yml` - Automated GitHub Actions workflow for data updates
-- `data/` - Current model pricing data in JSON and CSV formats
-- `robots.txt` - Search engine crawler instructions
-- `sitemap.xml` - Sitemap for better SEO indexing
+- `index.html` - 带有高级筛选和搜索功能的交互式网页界面
+- `scripts/get_zipped.sh` - 从 OpenRouter API 获取最新价格的数据获取脚本
+- `.github/workflows/daily_run.yml` - 用于数据更新的自动化 GitHub Actions 工作流
+- `data/` - JSON 和 CSV 格式的当前模型价格数据
+- `robots.txt` - 搜索引擎爬虫指令
+- `sitemap.xml` - 更好的 SEO 索引站点地图
 
-## 🚀 Quick Start
+## 🚀 快速开始
 
-1. Clone the repository:
+1. 克隆仓库:
     ```bash
     git clone https://github.com/jvrck/openrouterlist.git
     cd openrouterlist
     ```
 
-2. Make sure you have `jq`, `curl`, and `zip` installed:
+2. 确保已安装 `jq`、`curl` 和 `zip`:
     ```bash
     sudo apt-get install jq curl zip
     ```
 
-    On macOS:
+    在 macOS 上:
     ```bash
     brew install jq curl zip
     ```
 
-3. Run the script manually:
+3. 手动运行脚本:
     ```bash
     bash ./scripts/get_zipped.sh
     ```
 
-4. View the results in the `results` folder or on the `output.csv` and `output.json` files.
+4. 在 `results` 文件夹中查看结果，或查看 `output.csv` 和 `output.json` 文件。
 
-## 🤖 Automated Updates
+## 🤖 自动更新
 
-The pricing data is automatically refreshed every 12 hours using GitHub Actions:
+价格数据使用 GitHub Actions 每 12 小时自动刷新:
 
-- Updates run at midnight and noon UTC daily
-- Latest pricing data is fetched directly from OpenRouter's API
-- Changes are automatically committed to the repository
-- Historical data is archived in timestamped zip files
+- 每日 UTC 时间午夜和中午运行更新
+- 直接从 OpenRouter API 获取最新价格数据
+- 更改自动提交到仓库
+- 历史数据保存在带时间戳的 zip 文件中
 
-## 📈 Data Fields
+## 📈 数据字段
 
-The comparison tool displays the following information for each model:
+比较工具为每个模型显示以下信息:
 
-| Field | Description |
+| 字段 | 描述 |
 |-------|-------------|
-| **Model ID** | Unique identifier for API calls |
-| **Model Name** | Human-readable model name |
-| **Created Date** | Model release date (YYYY-MM-DD) |
-| **Context Length** | Maximum token context window |
-| **Prompt Cost** | USD per 1M input tokens |
-| **Completion Cost** | USD per 1M output tokens |
-| **Tool Calling** | Supports function/API calls |
-| **Structured Outputs** | Returns formatted JSON/XML |
-| **Reasoning** | Shows step-by-step thinking |
-| **Response Format** | Custom output formatting |
-| **Web Search** | Can search the internet |
+| **模型 ID** | API 调用的唯一标识符 |
+| **模型名称** | 人类可读的模型名称 |
+| **创建日期** | 模型发布日期 (YYYY-MM-DD) |
+| **上下文长度** | 最大令牌上下文窗口 |
+| **提示成本** | 每 100 万输入令牌的美元价格 |
+| **完成成本** | 每 100 万输出令牌的美元价格 |
+| **工具调用** | 支持函数/API 调用 |
+| **结构化输出** | 返回格式化的 JSON/XML |
+| **推理** | 显示逐步思考过程 |
+| **响应格式** | 自定义输出格式 |
+| **网络搜索** | 可以搜索互联网 |
 
-## 🌐 Live Website
+## 🌐 在线网站
 
-Access the tool online: **[https://openrouterlist.jvrck.com/](https://openrouterlist.jvrck.com/)**
+在线访问工具: **[https://openrouterlist.jvrck.com/](https://openrouterlist.jvrck.com/)**
 
-The website features:
-- Real-time search and filtering
-- Export to CSV, Excel, PDF
-- Dark/light theme toggle
-- Mobile-responsive design
-- Keyboard shortcuts for power users
+网站功能包括:
+- 实时搜索和筛选
+- 导出为 CSV、Excel、PDF
+- 深色/浅色主题切换
+- 移动端响应式设计
+- 高级用户键盘快捷键
 
-## 🤝 Contributing
+## 🤝 贡献
 
-Contributions are welcome! Feel free to:
+欢迎贡献! 随时可以:
 
-- Report bugs or request features via [Issues](https://github.com/jvrck/openrouterlist/issues)
-- Submit pull requests with improvements
-- Share the tool with others who might find it useful
+- 通过 [Issues](https://github.com/jvrck/openrouterlist/issues) 报告错误或请求功能
+- 提交改进的拉取请求
+- 与可能觉得此工具有用的其他人分享
 
-## 📄 License
+## 📄 许可证
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+本项目采用 MIT 许可证 - 详情请参阅 [LICENSE](LICENSE) 文件。
 
-## 🔗 Related Links
+## 🔗 相关链接
 
 - [OpenRouter API](https://openrouter.ai/)
-- [OpenRouter Documentation](https://openrouter.ai/docs)
-- [API Pricing](https://openrouter.ai/docs#pricing)
+- [OpenRouter 文档](https://openrouter.ai/docs)
+- [API 价格](https://openrouter.ai/docs#pricing)
 
 ---
 
-**Keywords**: OpenRouter pricing, AI model costs, LLM pricing comparison, GPT-4 pricing, Claude pricing, Llama pricing, AI API costs, model comparison tool, token pricing calculator, language model costs, OpenRouter models
+**关键词**: OpenRouter 价格, AI 模型成本, LLM 价格比较, GPT-4 价格, Claude 价格, Llama 价格, AI API 成本, 模型比较工具, 令牌价格计算器, 语言模型成本, OpenRouter 模型
