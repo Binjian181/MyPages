@@ -1,4 +1,4 @@
-id,name,created,context_length,pricing.prompt,pricing.completion,tool_calling,structured_outputs,reasoning,response_format,web_search
+﻿模型 ID,模型名称,创建时间,上下文长度,输入成本,输出成本,工具调用,结构化输出,推理,响应格式,网络搜索
 mistralai/devstral-2512:free,Mistral: Devstral 2 2512 (free),1765285419,262144,0,0,Yes,Yes,No,Yes,No
 relace/relace-search,Relace: Relace Search,1765213560,256000,0.000001,0.000003,Yes,No,No,No,No
 z-ai/glm-4.6v,Z.AI: GLM 4.6V,1765207462,131072,0.0000003,0.0000009,Yes,Yes,Yes,Yes,No

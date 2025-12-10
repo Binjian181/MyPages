@@ -2,6 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OpenRouter 模型定价与比较 | AI 模型成本计算器</title>
   
@@ -197,11 +198,7 @@
       background-color: var(--bg-hover);
     }
 
-    #favoritesToggle {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
+    
 
     .info-section {
       background-color: var(--bg-secondary);
@@ -368,31 +365,7 @@
       color: white;
     }
 
-    .filter-presets {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      align-items: center;
-      margin-top: 10px;
-      padding-top: 10px;
-      border-top: 1px solid var(--border-color);
-    }
-
-    .preset-btn {
-      padding: 6px 12px;
-      border: 1px solid var(--border-color);
-      background-color: var(--bg-primary);
-      color: var(--text-primary);
-      cursor: pointer;
-      border-radius: 5px;
-      font-size: 13px;
-      transition: all 0.2s;
-    }
-
-    .preset-btn:hover {
-      background-color: var(--bg-hover);
-      transform: translateY(-1px);
-    }
+    
 
     .filter-results-info {
       padding: 8px 12px;
@@ -479,24 +452,7 @@
       text-decoration: underline;
     }
 
-    .favorite-btn {
-      cursor: pointer;
-      font-size: 18px;
-      background: none;
-      border: none;
-      padding: 0;
-      margin-right: 5px;
-      color: var(--text-secondary);
-      transition: color 0.3s;
-    }
-
-    .favorite-btn.favorited {
-      color: var(--favorite-color);
-    }
-
-    .favorite-btn:hover {
-      color: var(--favorite-color);
-    }
+    
 
     /* Density Styles */
     table.density-compact td,
@@ -513,10 +469,81 @@
     table.density-spacious th {
       padding: 12px 16px !important;
     }
+    
+    /* Mobile table improvements */
+    @media (max-width: 768px) {
+      table.density-compact td,
+      table.density-compact th {
+        padding: 6px 4px !important;
+        font-size: 11px;
+      }
+      
+      table.density-comfortable td,
+      table.density-comfortable th {
+        padding: 8px 6px !important;
+        font-size: 12px;
+      }
+      
+      table.density-spacious td,
+      table.density-spacious th {
+        padding: 10px 8px !important;
+        font-size: 13px;
+      }
+    }
 
     /* Mobile Card View */
     .card-view {
       display: none;
+    }
+    
+    /* Mobile navigation improvements */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 5px;
+      }
+      
+      /* Make header more mobile-friendly */
+      .header {
+        padding: 10px;
+        background-color: var(--bg-secondary);
+        border-radius: 8px;
+        margin-bottom: 15px;
+      }
+      
+      /* Improve button spacing on mobile */
+      .controls > * {
+        margin-bottom: 8px;
+      }
+      
+      /* Better spacing for sections */
+      .info-section,
+      .capability-filters {
+        margin-bottom: 15px;
+      }
+      
+      /* Make search box more prominent on mobile */
+      .dataTables_filter input {
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 16px; /* Prevent zoom on iOS */
+      }
+      
+      /* Better table info display */
+      .dataTables_info {
+        text-align: center;
+        margin-top: 10px;
+      }
+      
+      /* Pagination improvements */
+      .dataTables_paginate {
+        text-align: center;
+        margin-top: 15px;
+      }
+      
+      .dataTables_paginate .paginate_button {
+        margin: 0 2px;
+        padding: 5px 10px;
+      }
     }
 
     .model-card {
@@ -727,17 +754,7 @@
       gap: 8px;
     }
 
-    /* Preset button tooltips */
-    .preset-btn-wrapper {
-      position: relative;
-      display: inline-block;
-    }
-
-    .preset-btn-wrapper .tooltip-content {
-      bottom: calc(100% + 4px);
-      white-space: normal;
-      min-width: 200px;
-    }
+    
 
     /* Mobile tooltip adjustments */
     @media (max-width: 768px) {
@@ -879,27 +896,39 @@
     @media (max-width: 768px) {
       .dt-buttons {
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 6px;
       }
       
       .dt-button {
-        font-size: 13px !important;
-        padding: 6px 12px !important;
+        font-size: 12px !important;
+        padding: 8px 10px !important;
+        margin: 2px;
       }
     }
 
     @media (max-width: 768px) {
       .view-toggle {
         display: block;
+        width: 100%;
+        margin-top: 10px;
       }
 
       .header {
         flex-direction: column;
         align-items: stretch;
+        gap: 15px;
+      }
+
+      h1 {
+        font-size: 1.5em;
+        text-align: center;
       }
 
       .controls {
         flex-direction: column;
         width: 100%;
+        gap: 10px;
       }
 
       .theme-toggle,
@@ -939,6 +968,104 @@
       body {
         padding: 10px;
       }
+      
+      .info-section {
+        font-size: 14px;
+      }
+      
+      .info-section h2 {
+        font-size: 1.1em;
+      }
+      
+      /* Improve table display on mobile */
+      .dataTables_wrapper {
+        font-size: 12px;
+      }
+      
+      .dataTables_wrapper .dataTables_info {
+        font-size: 11px;
+      }
+      
+      .dataTables_wrapper .dataTables_length,
+      .dataTables_wrapper .dataTables_filter {
+        font-size: 12px;
+      }
+      
+      /* Make table scrollable horizontally on mobile */
+      .table-view {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      
+      /* Improve card view on mobile */
+      .model-card {
+        margin-bottom: 12px;
+        padding: 12px;
+      }
+      
+      .model-card-title {
+        font-size: 15px;
+      }
+      
+      .model-card-details {
+        font-size: 13px;
+      }
+      
+      /* Better button layout on mobile */
+      .btn {
+        font-size: 14px;
+        padding: 10px 15px;
+        width: 100%;
+        margin-bottom: 5px;
+      }
+      
+      /* Modal improvements for mobile */
+      .modal-content {
+        width: 95%;
+        margin: 5% auto;
+        padding: 15px;
+      }
+      
+      .shortcuts-list {
+        font-size: 14px;
+      }
+      
+      .shortcut-item {
+        padding: 10px 0;
+      }
+    }
+    
+    /* Extra small screens */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.3em;
+      }
+      
+      .capability-checkbox {
+        padding: 10px;
+        font-size: 13px;
+      }
+      
+      .model-card {
+        padding: 10px;
+      }
+      
+      .model-card-title {
+        font-size: 14px;
+      }
+      
+      .model-card-details {
+        font-size: 12px;
+      }
+      
+      .dataTables_wrapper {
+        font-size: 11px;
+      }
+      
+      .dt-button {
+        font-size: 11px !important;
+        padding: 6px 8px !important;
+      }
     }
   </style>
 </head>
@@ -957,10 +1084,7 @@
           <button class="density-btn active" data-density="comfortable">舒适</button>
           <button class="density-btn" data-density="spacious">宽松</button>
         </div>
-        <button id="favoritesToggle" class="btn">
-          <span>⭐</span>
-          <span>仅收藏</span>
-        </button>
+        
         <button id="viewToggle" class="btn view-toggle">📱 卡片视图</button>
         <button id="helpBtn" class="btn" aria-label="Show keyboard shortcuts">? 帮助</button>
       </div>
@@ -1049,25 +1173,7 @@
         </div>
       </div>
       
-      <div class="filter-presets">
-        <span style="color: var(--text-secondary); font-size: 13px; margin-right: 10px;">快速筛选：</span>
-        <div class="preset-btn-wrapper">
-          <button class="preset-btn" data-preset="agentic">🤖 代理模型</button>
-          <div class="tooltip-content">筛选具有工具调用 + 结构化输出能力的模型</div>
-        </div>
-        <div class="preset-btn-wrapper">
-          <button class="preset-btn" data-preset="reasoning">💭 推理模型</button>
-          <div class="tooltip-content">筛选具有高级推理能力的模型</div>
-        </div>
-        <div class="preset-btn-wrapper">
-          <button class="preset-btn" data-preset="structured">📊 结构化输出</button>
-          <div class="tooltip-content">筛选支持结构化输出 + 响应格式的模型</div>
-        </div>
-        <div class="preset-btn-wrapper">
-          <button class="preset-btn" data-preset="web">🔍 网络启用</button>
-          <div class="tooltip-content">筛选具有网络搜索能力的模型</div>
-        </div>
-      </div>
+      
       
       <div class="filter-results-info" id="filterResultsInfo">
         <span id="filterResultsText">0 个模型匹配您的筛选条件</span>
@@ -1090,10 +1196,10 @@
           <input type="checkbox" data-column="3" checked> 上下文长度
         </label>
         <label class="column-checkbox">
-          <input type="checkbox" data-column="4" checked> 提示词成本
+          <input type="checkbox" data-column="4" checked> 输入成本
         </label>
         <label class="column-checkbox">
-          <input type="checkbox" data-column="5" checked> 补全成本
+          <input type="checkbox" data-column="5" checked> 输出成本
         </label>
         <label class="column-checkbox">
           <input type="checkbox" data-column="6" checked> 工具调用
@@ -1144,10 +1250,7 @@
           <span>聚焦搜索</span>
           <span class="shortcut-key">/</span>
         </div>
-        <div class="shortcut-item">
-          <span>切换收藏</span>
-          <span class="shortcut-key">f</span>
-        </div>
+        
         <div class="shortcut-item">
           <span>更改主题</span>
           <span class="shortcut-key">t</span>
@@ -1192,8 +1295,6 @@
     // Global variables
     let dataTable;
     let allData = [];
-    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    let showFavoritesOnly = false;
     let currentTheme = localStorage.getItem('theme') || 'system';
     let currentDensity = localStorage.getItem('density') || 'comfortable';
     let columnVisibility = JSON.parse(localStorage.getItem('columnVisibility')) || {};
@@ -1230,46 +1331,7 @@
       currentDensity = density;
     }
 
-    // Favorites management
-    function toggleFavorite(modelId) {
-      const index = favorites.indexOf(modelId);
-      if (index > -1) {
-        favorites.splice(index, 1);
-      } else {
-        favorites.push(modelId);
-      }
-      localStorage.setItem('favorites', JSON.stringify(favorites));
-      updateFavoriteButtons();
-      
-      if (showFavoritesOnly) {
-        filterFavorites();
-      }
-    }
-
-    function updateFavoriteButtons() {
-      $('.favorite-btn').each(function() {
-        const modelId = $(this).data('model-id');
-        if (favorites.includes(modelId)) {
-          $(this).addClass('favorited').html('★');
-        } else {
-          $(this).removeClass('favorited').html('☆');
-        }
-      });
-    }
-
-    function filterFavorites() {
-      if (dataTable) {
-        if (showFavoritesOnly) {
-          dataTable.column(0).search(favorites.join('|'), true, false).draw();
-        } else {
-          dataTable.column(0).search('').draw();
-        }
-      }
-      
-      if (isCardView) {
-        renderCardView();
-      }
-    }
+    
 
     // Capability filter functions
     function updateCapabilityFilters() {
@@ -1333,9 +1395,7 @@
     }
     
     function getFilteredData() {
-      let data = showFavoritesOnly ? 
-        allData.filter(row => favorites.includes(row.id)) : 
-        allData;
+      let data = allData;
       
       if (!isCapabilityFilterActive) return data;
       
@@ -1355,28 +1415,7 @@
       updateCapabilityFilters();
     }
     
-    function applyPresetFilter(preset) {
-      clearCapabilityFilters();
-      
-      switch(preset) {
-        case 'agentic':
-          $('#filter-tool-calling').prop('checked', true);
-          $('#filter-structured-outputs').prop('checked', true);
-          break;
-        case 'reasoning':
-          $('#filter-reasoning').prop('checked', true);
-          break;
-        case 'structured':
-          $('#filter-structured-outputs').prop('checked', true);
-          $('#filter-response-format').prop('checked', true);
-          break;
-        case 'web':
-          $('#filter-web-search').prop('checked', true);
-          break;
-      }
-      
-      updateCapabilityFilters();
-    }
+    
 
     // URL state management
     function updateURLState() {
@@ -1387,7 +1426,7 @@
         if (search) params.set('search', search);
       }
       
-      if (showFavoritesOnly) params.set('favorites', 'true');
+      
       if (currentTheme !== 'system') params.set('theme', currentTheme);
       if (currentDensity !== 'comfortable') params.set('density', currentDensity);
       
@@ -1416,13 +1455,7 @@
         dataTable.search(params.get('search')).draw();
       }
       
-      if (params.has('favorites')) {
-        showFavoritesOnly = params.get('favorites') === 'true';
-        if (showFavoritesOnly) {
-          $('#favoritesToggle').addClass('active');
-          filterFavorites();
-        }
-      }
+      
       
       if (params.has('theme')) {
         applyTheme(params.get('theme'));
@@ -1468,15 +1501,12 @@
       const dataToRender = getFilteredData();
       
       dataToRender.forEach(row => {
-        const isFavorited = favorites.includes(row.id);
         const card = $(`
           <div class="model-card">
             <div class="model-card-header">
               <div class="model-card-title">
                 <a href="https://openrouter.ai/models/${row.id}" target="_blank">${row.name}</a>
               </div>
-              <button class="favorite-btn ${isFavorited ? 'favorited' : ''}" 
-                      data-model-id="${row.id}">${isFavorited ? '★' : '☆'}</button>
             </div>
             <div class="model-card-details">
               <div class="model-card-row">
@@ -1492,12 +1522,12 @@
                 <span class="model-card-value">${row.context_length}</span>
               </div>
               <div class="model-card-row">
-                <span class="model-card-label">提示词成本:</span>
-                <span class="model-card-value">${row.prompt_cost}/百万令牌</span>
+                <span class="model-card-label">输入成本:</span>
+                <span class="model-card-value">${row.prompt_cost}/1M token</span>
               </div>
               <div class="model-card-row">
-                <span class="model-card-label">补全成本:</span>
-                <span class="model-card-value">${row.completion_cost}/百万令牌</span>
+                <span class="model-card-label">输出成本:</span>
+                <span class="model-card-value">${row.completion_cost}/1M token</span>
               </div>
               ${row.tool_calling === 'Yes' ? `<div class="model-card-row">
                 <span class="model-card-label">工具调用:</span>
@@ -1523,11 +1553,6 @@
           </div>
         `);
         
-        card.find('.favorite-btn').on('click', function() {
-          toggleFavorite(row.id);
-          renderCardView();
-        });
-        
         cardContainer.append(card);
       });
     }
@@ -1548,9 +1573,7 @@
             e.preventDefault();
             $('.dataTables_filter input').focus();
             break;
-          case 'f':
-            $('#favoritesToggle').click();
-            break;
+          
           case 't':
             const themes = ['light', 'dark', 'system'];
             const currentIndex = themes.indexOf(currentTheme);
@@ -1607,6 +1630,15 @@
       // Setup keyboard shortcuts
       setupKeyboardShortcuts();
       
+      // Check if mobile and switch to card view by default
+      if (window.innerWidth <= 768) {
+        isCardView = true;
+        $('.table-view').hide();
+        $('.card-view').show();
+        $('.column-selector').hide();
+        $('#viewToggle').html('📊 表格视图');
+      }
+      
       // Setup mobile tooltip handling
       if ('ontouchstart' in window) {
         $('.tooltip-wrapper').on('click', function(e) {
@@ -1632,13 +1664,7 @@
         updateURLState();
       });
       
-      // Favorites toggle
-      $('#favoritesToggle').on('click', function() {
-        showFavoritesOnly = !showFavoritesOnly;
-        $(this).toggleClass('active', showFavoritesOnly);
-        filterFavorites();
-        updateURLState();
-      });
+      
       
       // View toggle (mobile)
       $('#viewToggle').on('click', function() {
@@ -1685,11 +1711,7 @@
         updateURLState();
       });
       
-      $('.preset-btn').on('click', function() {
-        const preset = $(this).data('preset');
-        applyPresetFilter(preset);
-        updateURLState();
-      });
+      
       
       // Help modal
       $('#helpBtn').on('click', function() {
@@ -1742,21 +1764,22 @@
 
       // Fetch and display the CSV data
       $.get("data/output.csv", function(data) {
-        var lines = data.split("\n");
+        // Ensure proper UTF-8 handling
+        var lines = data.split(/\r?\n/);
   
         // Create a mapping of original headers to new headers
         var headerMapping = {
-          "id": "模型 ID",
-          "name": "模型名称",
-          "created": "创建时间",
-          "context_length": "上下文长度",
-          "pricing.prompt": "提示词成本 <br>每百万令牌美元",
-          "pricing.completion": "补全成本 <br>每百万令牌美元",
-          "tool_calling": "工具调用",
-          "structured_outputs": "结构化输出",
-          "reasoning": "推理",
-          "response_format": "响应格式",
-          "web_search": "网络搜索"
+          "模型 ID": "模型 ID",
+          "模型名称": "模型名称",
+          "创建时间": "创建时间",
+          "上下文长度": "上下文长度",
+          "输入成本": "输入成本 <br>1M token/$",
+          "输出成本": "输出成本 <br>1M token/$",
+          "工具调用": "工具调用",
+          "结构化输出": "结构化输出",
+          "推理": "推理",
+          "响应格式": "响应格式",
+          "网络搜索": "网络搜索"
         };
   
         // Get the headers from the first row of the CSV
@@ -1783,27 +1806,27 @@
             var rowData = {};
   
             row.forEach(function(cell, index) {
-              var columnName = headers[index].trim().toLowerCase();
+              var columnName = headers[index].trim();
               var cleanedValue = removeQuotes(cell.trim());
   
               // Capture the id for the current row
-              if (columnName === "id") {
+              if (columnName === "模型 ID") {
                 currentId = cleanedValue;
                 rowData.id = cleanedValue;
               }
               
-              if (columnName === "name") {
+              if (columnName === "模型名称") {
                 rowData.name = cleanedValue;
               }
   
               // Check for pricing columns
-              if ((columnName === "pricing.prompt" || columnName === "pricing.completion") && currentId !== "openrouter/auto") {
+              if ((columnName === "输入成本" || columnName === "输出成本") && currentId !== "openrouter/auto") {
                 var numericValue = parseFloat(cleanedValue.replace(/,/g, ''));
                 if (!isNaN(numericValue)) {
                   var multipliedValue = numericValue * 1000000;
                   var formattedValue = multipliedValue.toFixed(2);
                   
-                  if (columnName === "pricing.prompt") {
+                  if (columnName === "输入成本") {
                     rowData.prompt_cost = formattedValue;
                   } else {
                     rowData.completion_cost = formattedValue;
@@ -1813,7 +1836,7 @@
                 } else {
                   rowHtml += "<td>Invalid</td>";
                 }
-              } else if (columnName === "created") {
+              } else if (columnName === "创建时间") {
                 // Convert Unix timestamp to YYYY-MM-DD format
                 var unixTimestamp = parseInt(cleanedValue, 10);
                 if (!isNaN(unixTimestamp)) {
@@ -1825,26 +1848,25 @@
                   rowData.created = "Invalid Date";
                   rowHtml += "<td>Invalid Date</td>";
                 }
-              } else if (columnName === "name") {
-                // Add favorite button and hyperlink to the Model Name field
-                var favoriteBtn = `<button class="favorite-btn" data-model-id="${currentId}">☆</button>`;
-                rowHtml += `<td>${favoriteBtn}<a href="https://openrouter.ai/models/${currentId}" target="_blank">${cleanedValue}</a></td>`;
-              } else if (columnName === "context_length") {
+              } else if (columnName === "模型名称") {
+                // Add hyperlink to the Model Name field
+                rowHtml += `<td><a href="https://openrouter.ai/models/${currentId}" target="_blank">${cleanedValue}</a></td>`;
+              } else if (columnName === "上下文长度") {
                 rowData.context_length = cleanedValue;
                 rowHtml += "<td>" + cleanedValue + "</td>";
-              } else if (columnName === "tool_calling") {
+              } else if (columnName === "工具调用") {
                 rowData.tool_calling = cleanedValue;
                 rowHtml += "<td>" + (cleanedValue === "Yes" ? "✓" : "-") + "</td>";
-              } else if (columnName === "structured_outputs") {
+              } else if (columnName === "结构化输出") {
                 rowData.structured_outputs = cleanedValue;
                 rowHtml += "<td>" + (cleanedValue === "Yes" ? "✓" : "-") + "</td>";
-              } else if (columnName === "reasoning") {
+              } else if (columnName === "推理") {
                 rowData.reasoning = cleanedValue;
                 rowHtml += "<td>" + (cleanedValue === "Yes" ? "✓" : "-") + "</td>";
-              } else if (columnName === "response_format") {
+              } else if (columnName === "响应格式") {
                 rowData.response_format = cleanedValue;
                 rowHtml += "<td>" + (cleanedValue === "Yes" ? "✓" : "-") + "</td>";
-              } else if (columnName === "web_search") {
+              } else if (columnName === "网络搜索") {
                 rowData.web_search = cleanedValue;
                 rowHtml += "<td>" + (cleanedValue === "Yes" ? "✓" : "-") + "</td>";
               } else {
@@ -1858,15 +1880,7 @@
           }
         }
         
-        // Update favorite buttons
-        updateFavoriteButtons();
         
-        // Setup favorite button handlers
-        $(document).on('click', '.favorite-btn', function(e) {
-          e.stopPropagation();
-          const modelId = $(this).data('model-id');
-          toggleFavorite(modelId);
-        });
   
         // Setup custom DataTables filter for capabilities
         $.fn.dataTable.ext.search.push(function(settings, data, dataIndex) {
@@ -1919,7 +1933,7 @@
           responsive: true,
           searchHighlight: true,
           drawCallback: function() {
-            updateFavoriteButtons();
+            // Draw callback function
           }
         });
         
