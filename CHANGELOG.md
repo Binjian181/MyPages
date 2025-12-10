@@ -1,132 +1,132 @@
-# Changelog
+# 更新日志
 
 ## [0.0.5] - 2025-08-30
 
-### Added
+### 新增
 
-- **Comprehensive SEO Optimization**
-  - Rich meta tags for improved search engine visibility
-  - OpenGraph and Twitter Card tags for enhanced social media sharing
-  - JSON-LD structured data for better search engine understanding
-  - Canonical URL to prevent duplicate content issues
-  - `robots.txt` file to guide search engine crawlers
-  - `sitemap.xml` for improved indexing and discoverability
-- **Semantic HTML5 Structure**
-  - Converted layout to use semantic elements (header, main, footer, section)
-  - Added ARIA labels for improved accessibility
-  - Proper heading hierarchy with descriptive H1 and H2 tags
-- **Enhanced Content & Copy**
-  - More descriptive page title optimized for search queries
-  - Keyword-rich meta description (160 characters)
-  - Informative content sections explaining the tool's purpose and features
-  - Footer with additional context and navigation links
-- **README Improvements**
-  - Professional badges for license, update status, and live website
-  - Comprehensive feature lists and use cases
-  - Data fields table with clear descriptions
-  - Contributing section to encourage community involvement
-  - Strategic keyword placement for GitHub SEO
+- **全面的 SEO 优化**
+  - 丰富的元标签，提高搜索引擎可见性
+  - OpenGraph 和 Twitter Card 标签，增强社交媒体分享
+  - JSON-LD 结构化数据，帮助搜索引擎更好理解
+  - 规范 URL，防止重复内容问题
+  - `robots.txt` 文件，指导搜索引擎爬虫
+  - `sitemap.xml`，改善索引和可发现性
+- **语义化 HTML5 结构**
+  - 将布局转换为使用语义元素（header、main、footer、section）
+  - 添加 ARIA 标签，提高可访问性
+  - 规范的标题层次结构，包含描述性的 H1 和 H2 标签
+- **增强的内容和文案**
+  - 更具描述性的页面标题，针对搜索查询进行优化
+  - 关键词丰富的元描述（160 个字符）
+  - 解释工具目的和功能的信息内容部分
+  - 包含额外上下文和导航链接的页脚
+- **README 改进**
+  - 专业的许可证、更新状态和在线网站徽章
+  - 全面的功能列表和使用案例
+  - 带有清晰描述的数据字段表格
+  - 鼓励社区参与的贡献部分
+  - 为 GitHub SEO 战略性地放置关键词
 
-### Changed
+### 更改
 
-- Page title from "Open Router Models" to "OpenRouter Model Pricing & Comparison | AI Model Cost Calculator"
-- Info section expanded with detailed feature descriptions and benefits
-- All external links now include `rel="noopener"` for security
-- README restructured with emojis and better organization
+- 页面标题从"Open Router Models"更改为"OpenRouter Model Pricing & Comparison | AI Model Cost Calculator"
+- 信息部分扩展，包含详细的功能描述和好处
+- 所有外部链接现在包含`rel="noopener"`以提高安全性
+- README 重新组织，使用表情符号和更好的结构
 
-### Technical
+### 技术
 
-- Added comprehensive meta tags covering SEO, OpenGraph, and Twitter Cards
-- Implemented JSON-LD structured data schema for web applications
-- Created SEO-friendly URL structure with canonical tags
-- Optimized for crawling with robots.txt and XML sitemap
+- 添加涵盖 SEO、OpenGraph 和 Twitter Cards 的全面元标签
+- 实现网络应用程序的 JSON-LD 结构化数据模式
+- 创建带有规范标签的 SEO 友好 URL 结构
+- 使用 robots.txt 和 XML 站点地图优化爬虫
 
 ## [0.0.4] - 2025-08-16
 
-### Added
+### 新增
 
-- **Interactive Tooltips for Better UX**
-  - Added helpful "?" icons with explanations for all capability filters
-  - Tooltips explain what each capability means (Tool Calling, Structured Outputs, etc.)
-  - Filter mode toggle tooltip clarifies "Match All" vs "Match Any" logic
-  - Quick filter preset tooltips describe what each preset filters for
-- **Enhanced Tooltip Features**
-  - Theme-aware tooltips that adapt to light/dark mode
-  - Mobile-friendly tooltips with tap-to-show functionality
-  - Smooth animations and positioning above elements
-  - Clear, concise explanations to help users understand filter options
+- **交互式工具提示，改善用户体验**
+  - 为所有能力筛选器添加了有帮助的"?"图标和解释
+  - 工具提示解释每种能力的含义（工具调用、结构化输出等）
+  - 筛选模式切换工具提示阐明"匹配全部"与"匹配任意"逻辑
+  - 快速筛选预设工具提示描述每个预设筛选的内容
+- **增强的工具提示功能**
+  - 适应浅色/深色模式的主题感知工具提示
+  - 移动端友好的工具提示，支持点击显示功能
+  - 平滑的动画和元素上方的定位
+  - 清晰、简洁的解释，帮助用户理解筛选选项
 
-### Changed
+### 更改
 
-- Capability filter checkboxes restructured to accommodate tooltip icons
-- Filter mode toggle wrapped for better tooltip positioning
-- Preset buttons wrapped individually for tooltip support
+- 能力筛选复选框重新结构化，以容纳工具提示图标
+- 筛选模式切换包装，以获得更好的工具提示定位
+- 预设按钮单独包装，以支持工具提示
 
 ## [0.0.3] - 2025-08-15
 
-### Added
+### 新增
 
-- **Model Capability Columns**: Added 5 new columns displaying model capabilities
-  - Tool Calling (144 models supported)
-  - Structured Outputs (142 models supported)
-  - Reasoning (90 models supported)
-  - Response Format (185 models supported)
-  - Web Search (16 models supported)
-- **Advanced Capability Filtering System**
-  - Filter models by required capabilities with Match All/Match Any modes
-  - Quick filter presets for common use cases (Agentic, Reasoning, Structured, Web-Enabled)
-  - Visual indicators showing active filter count and matching models
-  - Real-time filtering with DataTables integration
-- **Enhanced Keyboard Shortcuts**
-  - `c` - Focus capability filters
-  - `m` - Toggle filter mode (Match All/Any)
-  - `x` - Clear all capability filters
-- **Improved URL State Management**
-  - Capability filters are now persisted in URL for sharing
-  - Filter mode preference saved in URL parameters
+- **模型能力列**: 添加了 5 个显示模型能力的新列
+  - 工具调用（144 个模型支持）
+  - 结构化输出（142 个模型支持）
+  - 推理（90 个模型支持）
+  - 响应格式（185 个模型支持）
+  - 网络搜索（16 个模型支持）
+- **高级能力筛选系统**
+  - 按所需能力筛选模型，支持匹配全部/匹配任意模式
+  - 常见用例的快速筛选预设（代理、推理、结构化、网络启用）
+  - 显示活动筛选计数和匹配模型的视觉指示器
+  - 与 DataTables 集成的实时筛选
+- **增强的键盘快捷键**
+  - `c` - 聚焦能力筛选
+  - `m` - 切换筛选模式（匹配全部/任意）
+  - `x` - 清除所有能力筛选
+- **改进的 URL 状态管理**
+  - 能力筛选现在保存在 URL 中以便分享
+  - 筛选模式偏好保存在 URL 参数中
 
-### Changed
+### 更改
 
-- Updated `get_zipped.sh` script to extract capability data from OpenRouter API's `supported_parameters` field
-- Card view now respects capability filters in addition to favorites
-- Column visibility toggles extended to support new capability columns
-- Mobile interface optimized for capability filter controls
+- 更新 `get_zipped.sh` 脚本，从 OpenRouter API 的 `supported_parameters` 字段提取能力数据
+- 卡片视图现在除了收藏外还遵守能力筛选
+- 列可见性切换扩展支持新的能力列
+- 移动界面针对能力筛选控件进行优化
 
-### Technical
+### 技术
 
-- Implemented custom DataTables search extension for capability filtering
-- Added complex jq parsing logic for capability detection in bash script
-- Enhanced state management to handle multiple filter types simultaneously
+- 实现自定义 DataTables 搜索扩展，用于能力筛选
+- 在 bash 脚本中添加复杂的 jq 解析逻辑，用于能力检测
+- 增强状态管理，同时处理多种筛选类型
 
 ## [0.0.2] - 2025-08-15
 
-### Added
+### 新增
 
-- Dark/Light theme toggle with system preference detection
-- Favorite models functionality with localStorage persistence
-- Shareable URLs that preserve filter/search state
-- Keyboard shortcuts for power users (/, f, t, d, v, e, ?, Esc)
-- Mobile-responsive card view layout for better mobile experience
-- Column show/hide customization options
-- Density options (Compact/Comfortable/Spacious) for row heights
-- Help modal showing all keyboard shortcuts
-- Modern styled export buttons with icons
+- 深色/浅色主题切换，支持系统偏好检测
+- 收藏模型功能，使用 localStorage 持久化
+- 可分享的 URL，保留筛选/搜索状态
+- 高级用户的键盘快捷键（/、f、t、d、v、e、?、Esc）
+- 移动端响应式卡片视图布局，改善移动体验
+- 列显示/隐藏自定义选项
+- 行高度的密度选项（紧凑/舒适/宽松）
+- 显示所有键盘快捷键的帮助模态框
+- 带有图标的现代化样式导出按钮
 
-### Changed
+### 更改
 
-- Updated color scheme from green to modern blue (#2563eb light, #3b82f6 dark)
-- Improved dark mode with better contrast and visibility
-- Modernized UI with smooth transitions and animations
-- Enhanced DataTables button styling with icons and hover effects
+- 将颜色方案从绿色更新为现代蓝色（浅色模式 #2563eb，深色模式 #3b82f6）
+- 改进深色模式，具有更好的对比度和可见性
+- 使用平滑过渡和动画现代化 UI
+- 增强 DataTables 按钮样式，带有图标和悬停效果
 
-### Fixed
+### 修复
 
-- Dark mode table cell background colors now display correctly
-- Density toggle functionality now properly changes table padding
-- Text contrast improved in dark mode for better readability
+- 深色模式表格单元格背景颜色现在正确显示
+- 密度切换功能现在正确更改表格内边距
+- 深色模式下文本对比度改进，提高可读性
 
 ## [0.0.1] - 2024-09-21
 
-### Added
+### 新增
 
-- Initial release of the project.
+- 项目的初始发布。
